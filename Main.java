@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class Main
 {
     public static void main (String[] args){
-        
         Scanner scanner=new Scanner(System.in);
         
     try{
@@ -24,8 +23,8 @@ public class Main
         }catch(Exception e){
         System.out.println("Error reading the file");
         return;
-        }
-        
+
+    }
     while(true){
         System.out.println("\nMenu");
         System.out.println("1. Print all students and their marks");
@@ -40,11 +39,12 @@ public class Main
         
         }catch(Exception e){
             System.out.println("Invalid input. Please enter a number between 1 and 4.");
-            scanner.nextLine(); // Clear the invalid input
+            scanner.nextLine();
             continue;
         }
+    }
         }
         }
-}
+    
 
 
