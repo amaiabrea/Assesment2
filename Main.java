@@ -34,7 +34,17 @@ public class Main
         System.out.println("4. Exit");
         System.out.print("Choose an option: ");
         
+        int choice;
+        try{
+           choice=scanner.nextInt();
+        
+        }catch(Exception e){
+            System.out.println("Invalid input. Please enter a number between 1 and 4.");
+            scanner.nextLine(); // Clear the invalid input
+            continue;
+        }
+        }
         }
 }
-}
+
 
