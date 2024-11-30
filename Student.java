@@ -7,5 +7,5 @@
  */
 public class Student extends Person
 {
-   
+   private int mark1, mark2, mark3, totalMarks;
 }
