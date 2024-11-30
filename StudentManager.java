@@ -19,6 +19,11 @@ public class StudentManager
         BufferedReader reader=new BufferedReader(new FileReader(fileName));
         String line;
         
+        while((line=reader.readLine())!=null){
+            if (line.startsWith("#")) continue;
+            
+        
+        }
     
     }
     
