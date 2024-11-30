@@ -34,6 +34,14 @@ public class StudentManager implements Sortable
     
     }
     reader.close();
+    public void printAllStudents(){
+    
+        for(Student student : students){
+        System.out.println(student);
+        }
+    
+    }
     
 }
-}
+
+
