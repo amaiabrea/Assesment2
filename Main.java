@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class Main
 {
     public static void main (String[] args){
+        StudentManager manager=new StudentManager();
         Scanner scanner=new Scanner(System.in);
         
     try{
@@ -41,6 +42,15 @@ public class Main
             System.out.println("Invalid input. Please enter a number between 1 and 4.");
             scanner.nextLine();
             continue;
+        }
+        
+        switch(choice){
+        case 1:
+                System.out.println("\nAll Students:");
+                manager.printAllStudents();
+                break;
+        
+        
         }
     }
         }
