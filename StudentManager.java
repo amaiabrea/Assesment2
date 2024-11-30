@@ -34,6 +34,7 @@ public class StudentManager implements Sortable
     
     }
     reader.close();
+}
     public void printAllStudents(){
     
         for(Student student : students){
@@ -41,7 +42,17 @@ public class StudentManager implements Sortable
         }
     
     }
-    
+    public List<Student> filterStudentsBelowThreshold(int threshold) {
+        List<Student> filtered = new ArrayList<>();
+        for (Student student : students) {
+            if (student.getTotalMarks() < threshold) {
+                filtered.add(student);
+            }
+}
+return filtered;
 }
 
+
+
+}
 

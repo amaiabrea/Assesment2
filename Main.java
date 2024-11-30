@@ -47,8 +47,15 @@ public class Main
         switch(choice){
         case 1:
                 System.out.println("\nAll Students:");
-                ;
+                manager.printAllStudents();
                 break;
+        case2:
+                System.out.println("Enter the threshold:");
+                int threshold;
+                try{
+                    threshold=scanner.nextIn();
+                
+                }
         
         
         }
