@@ -13,7 +13,10 @@ public class Student extends Person
    public Student(String name, String id, int mark1, int mark2, int mark3){
     
    super(name, id); 
-    
+   this.mark1=mark1;
+   this.mark2=mark2;
+   this.mark3=mark3;
+    this.totalMarks=mark1+mark2+mark3;
     
     
     }
