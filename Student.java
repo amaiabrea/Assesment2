@@ -18,6 +18,18 @@ public class Student extends Person
    this.mark3=mark3;
     this.totalMarks=mark1+mark2+mark3;
     
+    }
+    
+    public int getTotalMarks(){
+        return totalMarks;
+    }
+    
+    @Override
+    public String toString(){
+    return getName()+ "(" +getId()+"):"+mark1+","+mark2+","+mark3+".Total:"+totalMarks;
+    
     
     }
-}
+        
+    }
+
