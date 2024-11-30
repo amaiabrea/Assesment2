@@ -18,10 +18,17 @@ public class Person
     
     }
     
-    public String getName(){
+public String getName(){
         return name;
     }
+public String getId(){
+        
+        return id;
+    }
+    
+public abstract String toString();
     
     }
     
-}
+    
+
