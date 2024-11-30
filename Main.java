@@ -53,10 +53,19 @@ public class Main
                 System.out.println("Enter the threshold:");
                 int threshold;
                 try{
-                    threshold=scanner.nextIn();
+                    threshold=scanner.nextInt();
                 
+                }catch(Exception e){
+                System.out.println("Invalid input.please enter a vaalid number.");
+                scanner.nextLine();
+                continue;
                 }
-        
+            System.out.println("\nStudents with total marks below " + threshold + ":");
+            for (Student student : manager.filterStudentsBelowThreshold(threshold)) {
+                        
+                System.out.println(student);
+                    }
+                    break;
         
         }
     }
