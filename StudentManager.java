@@ -21,7 +21,14 @@ public class StudentManager
         
         while((line=reader.readLine())!=null){
             if (line.startsWith("#")) continue;
-            
+            String[] parts = line.split(",");
+            if (parts.length == 5) {
+                String name = parts[0].trim();
+                String id = parts[1].trim();
+                int mark1 = Integer.parseInt(parts[2].trim());
+                int mark2 = Integer.parseInt(parts[3].trim());
+                int mark3 = Integer.parseInt(parts[4].trim());
+                students.add(new Student(name, id, mark1, mark2, mark3));
         
         }
     
