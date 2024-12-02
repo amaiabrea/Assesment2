@@ -15,7 +15,7 @@ public class StudentManager implements Sortable{
     
     }
     public void loadStudentsFromFile(String fileName) throws IOException{
-        BufferedReader reader=new BufferedReader(new FileReader(fileName));
+        try(BufferedReader reader=new BufferedReader(new FileReader(fileName))){;
         String line;
         
         while((line=reader.readLine())!=null){
@@ -32,7 +32,8 @@ public class StudentManager implements Sortable{
         }
     
     }
-    reader.close();
+}
+    
 }
     public void printAllStudents(){
     
