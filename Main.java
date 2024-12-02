@@ -68,7 +68,9 @@ public class Main
                     break;
         case 3:
             System.out.println("\nTop and bottom 5 students:");
-            manager.
+            manager.printTopBottomSudents();
+            break;
+            
                     
         
         }

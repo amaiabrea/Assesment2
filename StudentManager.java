@@ -77,7 +77,10 @@ public void printTopBottomSudents(){
             System.out.println(students.get(i));
         }
     
-
+    System.out.println("\nBottom 5 Students:");
+    for(int i=Math.max(0,students.size() -5); i< students.size();i++){
+        System.out.println(students.get(i));
+    }
 }
 
 }
