@@ -71,6 +71,12 @@ public void sortDescending(List<Student> students){
 
 public void printTopBottomSudents(){
     sortDescending(students);
+    
+    System.out.println("\nTop 5 Students:");
+    for(int i = 0; i < Math.min(5, students.size()); i++) {
+            System.out.println(students.get(i));
+        }
+    
 
 }
 
