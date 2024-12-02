@@ -7,8 +7,7 @@
  */
 import java.util.*;
 import java.io.*;
-public class StudentManager implements Sortable
-{
+public class StudentManager implements Sortable{
     private List<Student> students;
     
     public StudentManager(){
