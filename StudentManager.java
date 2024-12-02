@@ -16,19 +16,26 @@ public class StudentManager implements Sortable{
     }
     public void loadStudentsFromFile(String fileName) throws IOException{
         try(BufferedReader reader=new BufferedReader(new FileReader(fileName))){;
-        String line;
+            String line;
         
         while((line=reader.readLine())!=null){
-            if (line.startsWith("#")) continue;
+            if (line.startsWith("#") || line.trim().isEmpty()) continue;
+            
             String[] parts = line.split(",");
             if (parts.length == 5) {
+               try{
                 String name = parts[0].trim();
                 String id = parts[1].trim();
                 int mark1 = Integer.parseInt(parts[2].trim());
                 int mark2 = Integer.parseInt(parts[3].trim());
                 int mark3 = Integer.parseInt(parts[4].trim());
+                
                 students.add(new Student(name, id, mark1, mark2, mark3));
-        
+            }catch(NumberFormatException e){
+            System.out.println("Invalid marks format in line: " + line);
+            }
+        }else {
+            System.out.println("Invalid line format: " + line);
         }
     
     }
