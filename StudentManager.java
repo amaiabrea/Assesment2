@@ -70,7 +70,7 @@ public void sortDescending(List<Student> students){
 }
 
 public void printTopBottomSudents(){
-
+    sortDescending(students);
 
 }
 
