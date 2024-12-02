@@ -16,17 +16,17 @@ public class Main
         StudentManager manager=new StudentManager();
         Scanner scanner=new Scanner(System.in);
         
-    try{
-        System.out.print("Enter the file name: ");
-        String fileName=scanner.nextLine();
+        try{
+            System.out.print("Enter the file name: ");
+            String fileName=scanner.nextLine();
     
     
         }catch(Exception e){
-        System.out.println("Error reading the file");
-        return;
+            System.out.println("Error reading the file");
+            return;
 
-    }
-    while(true){
+        }
+        while(true){
         System.out.println("\nMenu");
         System.out.println("1. Print all students and their marks");
         System.out.println("2. Filter students below a threshold");
@@ -45,11 +45,11 @@ public class Main
         }
         
         switch(choice){
-        case 1:
+            case 1:
                 System.out.println("\nAll Students:");
                 manager.printAllStudents();
                 break;
-        case 2:
+            case 2:
                 System.out.println("Enter the threshold:");
                 int threshold;
                 try{
@@ -60,24 +60,28 @@ public class Main
                 scanner.nextLine();
                 continue;
                 }
-            System.out.println("\nStudents with total marks below " + threshold + ":");
-            for (Student student : manager.filterStudentsBelowThreshold(threshold)) {
+                System.out.println("\nStudents with total marks below " + threshold + ":");
+                for (Student student : manager.filterStudentsBelowThreshold(threshold)) {
                         
                 System.out.println(student);
                     }
                     break;
-        case 3:
+            case 3:
             System.out.println("\nTop and bottom 5 students:");
             manager.printTopBottomSudents();
             break;
             
-        case 4:
+            case 4:
+            System.out.println("Exiting the programm.Goodbye!:)");
+                return;
+                
+            default:
+            System.out.println("Invalid choice. Please enter a number between 1 and 4.");
             
-            
-                    
+                 
         
         }
-    }
+        }
         }
         }
     
