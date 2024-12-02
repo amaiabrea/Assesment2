@@ -5,7 +5,8 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Sortable
+import java.util.List;
+public interface Sortable
 {
- 
+     void sortDescending(List<Student> students);
 }
