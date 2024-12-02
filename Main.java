@@ -49,7 +49,7 @@ public class Main
                 System.out.println("\nAll Students:");
                 manager.printAllStudents();
                 break;
-        case2:
+        case 2:
                 System.out.println("Enter the threshold:");
                 int threshold;
                 try{
@@ -66,6 +66,10 @@ public class Main
                 System.out.println(student);
                     }
                     break;
+        case 3:
+            System.out.println("\nTop and bottom 5 students:");
+            manager.
+                    
         
         }
     }
