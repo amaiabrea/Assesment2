@@ -82,6 +82,8 @@ public void printTopBottomSudents(){
         System.out.println(students.get(i));
     }
 }
-
+public List<Student> getAllStudents(){
+return students;
+}
 }
 
