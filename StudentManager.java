@@ -17,20 +17,27 @@ public class StudentManager implements Sortable{
     public void loadStudentsFromFile(String fileName) throws IOException{
         try(BufferedReader reader=new BufferedReader(new FileReader(fileName))){;
             String line;
+        boolean isFirstLine=true;
         
         while((line=reader.readLine())!=null){
-            if (line.startsWith("#") || line.trim().isEmpty()) continue;
-            
+            if (isFirstLine || line.trim().isEmpty()) {
+                isFirstLine = false;
+                continue;
+            }
             String[] parts = line.split(",");
-            if (parts.length == 5) {
+            
+            
+            if (parts.length == 6) {
                try{
-                String name = parts[0].trim();
-                String id = parts[1].trim();
-                int mark1 = Integer.parseInt(parts[2].trim());
-                int mark2 = Integer.parseInt(parts[3].trim());
-                int mark3 = Integer.parseInt(parts[4].trim());
+                String lastName = parts[0].trim();
+                String firstName=parts[1].trim();
+                String studentId = parts[2].trim();
                 
-                students.add(new Student(name, id, mark1, mark2, mark3));
+                double mark1 = parts[3].trim().isEmpty() ? 0.0 : Double.parseDouble(parts[3].trim());
+                double mark2 = parts[4].trim().isEmpty() ? 0.0 : Double.parseDouble(parts[4].trim());
+                double mark3 = parts[5].trim().isEmpty() ? 0.0 : Double.parseDouble(parts[5].trim());
+                
+                students.add(new Student(lastName, firstName, studentId, mark1, mark2, mark3));
             }catch(NumberFormatException e){
             System.out.println("Invalid marks format in line: " + line);
             }

@@ -7,23 +7,28 @@
  */
 public abstract class Person
 {
- private String name;
- private String id;
+ private String lastName;
+ private String firstName;
+ private String studentId;
  
  
  
- public Person(String name, String id){
-    this.name=name;
-    this.id=id;    
+ public Person(String lastName, String firstName, String studentId){
+    this.lastName=lastName;
+    this.firstName=firstName;
+    this.studentId=studentId;    
     
     }
     
-public String getName(){
-        return name;
+public String getLastName(){
+        return lastName;
     }
-public String getId(){
+    public String getFirstName(){
+        return firstName;
+    }
+public String getStudentId(){
         
-        return id;
+        return studentId;
     }
     
 public abstract String toString();
